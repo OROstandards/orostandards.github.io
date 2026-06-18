@@ -3,181 +3,320 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ORO Standards™ | The Gold Standard</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+
+{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+:root{
+--gold:#d4af37;
+--gold-light:#f7d774;
+--black:#050505;
+}
+
 body{
 background:#050505;
-color:#fff;
-font-family:Montserrat,sans-serif;
+color:white;
+font-family:'Montserrat',sans-serif;
 overflow-x:hidden;
 }
+
+/ Luxury Background /
 
 body::before{
 content:'';
 position:fixed;
 inset:0;
 background:
-radial-gradient(circle at 50% 35%, rgba(212,175,55,.18), transparent 40%),
-radial-gradient(circle at 20% 80%, rgba(212,175,55,.08), transparent 30%),
-radial-gradient(circle at 80% 20%, rgba(212,175,55,.08), transparent 30%);
-z-index:-2;
+radial-gradient(circle at 50% 20%, rgba(212,175,55,.18), transparent 40%),
+radial-gradient(circle at 20% 80%, rgba(212,175,55,.08), transparent 35%),
+radial-gradient(circle at 80% 70%, rgba(212,175,55,.08), transparent 35%);
+pointer-events:none;
+z-index:-1;
 }
+
+/ Hero /
 
 .hero{
 height:100vh;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
 }
 
-.logo{
-width:min(75vw,520px);
-filter:drop-shadow(0 0 40px rgba(212,175,55,.35));
+.hero-content{
+max-width:1000px;
+}
+
+.hero-logo{
+width:min(90vw,650px);
+height:auto;
 animation:float 6s ease-in-out infinite;
+filter:
+drop-shadow(0 0 25px rgba(212,175,55,.35))
+drop-shadow(0 0 70px rgba(212,175,55,.15));
 }
 
 @keyframes float{
-50%{transform:translateY(-12px);}
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-12px);
+}
 }
 
-.title{
-font-family:Cinzel,serif;
-font-size:clamp(2rem,7vw,5rem);
-color:#d4af37;
+.hero-title{
+font-family:'Cinzel',serif;
+font-size:clamp(2rem,6vw,4rem);
+color:var(--gold);
 letter-spacing:6px;
 margin-top:20px;
 }
 
-.subtitle{
-margin-top:18px;
-font-size:clamp(1rem,3vw,1.4rem);
+.hero-sub{
+margin-top:20px;
+font-size:1rem;
 letter-spacing:4px;
-opacity:.9;
+color:#d6d6d6;
+line-height:2;
 }
 
-.btn{
+.enter-btn{
 display:inline-block;
 margin-top:40px;
-padding:16px 42px;
-border:1px solid #d4af37;
-color:#d4af37;
+padding:16px 45px;
+border:1px solid var(--gold);
+color:var(--gold);
 text-decoration:none;
 letter-spacing:2px;
-transition:.3s;
+transition:.4s;
 }
 
-.btn:hover{
-background:#d4af37;
-color:#000;
-box-shadow:0 0 30px rgba(212,175,55,.4);
+.enter-btn:hover{
+background:var(--gold);
+color:black;
+box-shadow:0 0 30px rgba(212,175,55,.3);
 }
 
-.ventures{
-padding:80px 8% 120px;
-}
+/ About /
 
-.section-title{
-font-family:Cinzel,serif;
+.section{
+padding:120px 10%;
 text-align:center;
-font-size:clamp(2rem,5vw,3.5rem);
-color:#d4af37;
-margin-bottom:50px;
+max-width:1000px;
+margin:auto;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
+.section h2{
+font-family:'Cinzel',serif;
+font-size:clamp(2rem,5vw,3rem);
+color:var(--gold);
+margin-bottom:30px;
 }
 
-.card{
-background:rgba(255,255,255,.03);
-border:1px solid rgba(212,175,55,.25);
-backdrop-filter:blur(10px);
-padding:40px 30px;
-transition:.35s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-border-color:#d4af37;
-box-shadow:0 0 40px rgba(212,175,55,.18);
-}
-
-.card h3{
-font-family:Cinzel,serif;
-color:#d4af37;
-font-size:1.8rem;
-margin-bottom:15px;
-}
-
-.card p{
-line-height:1.8;
+.section p{
+font-size:1.15rem;
+line-height:2;
 color:#ddd;
 }
 
-footer{
-padding:50px 20px;
+/ Founder /
+
+.founder{
+padding:120px 10%;
 text-align:center;
-border-top:1px solid rgba(212,175,55,.15);
+}
+
+.founder h2{
+font-family:'Cinzel',serif;
+font-size:clamp(2rem,5vw,3rem);
+color:var(--gold);
+margin-bottom:20px;
+}
+
+.founder p{
+font-size:1.2rem;
+letter-spacing:2px;
+color:#d6d6d6;
+margin-bottom:35px;
+}
+
+.instagram-btn{
+display:inline-block;
+padding:16px 45px;
+border:1px solid var(--gold);
+color:var(--gold);
+text-decoration:none;
+transition:.4s;
+}
+
+.instagram-btn:hover{
+background:var(--gold);
+color:black;
+}
+
+/ Future /
+
+.future{
+padding:120px 10%;
+text-align:center;
+}
+
+.future h2{
+font-family:'Cinzel',serif;
+font-size:clamp(2rem,5vw,3rem);
+color:var(--gold);
+margin-bottom:60px;
+}
+
+.future-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+max-width:1000px;
+margin:auto;
+}
+
+.future-item{
+padding:40px;
+border:1px solid rgba(212,175,55,.15);
+font-family:'Cinzel',serif;
+font-size:1.5rem;
+color:var(--gold);
+background:rgba(255,255,255,.02);
+backdrop-filter:blur(10px);
+}
+
+/ Footer */
+
+footer{
+padding:80px 20px;
+text-align:center;
+border-top:1px solid rgba(212,175,55,.1);
 }
 
 footer h2{
-font-family:Cinzel,serif;
-color:#d4af37;
+font-family:'Cinzel',serif;
+color:var(--gold);
 margin-bottom:10px;
 }
+
+footer p{
+color:#888;
+}
+
+@media(max-width:768px){
+
+.hero-sub{
+font-size:.85rem;
+letter-spacing:2px;
+}
+
+.future-item{
+font-size:1.2rem;
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
 <section class="hero">
 
-<img class="logo" src="assets/71487A6F-4BB2-4D5F-B77E-744D8CA36AC9.png" alt="ORO Standards Logo">
+<div class="hero-content">
 
-<h1 class="title">THE GOLD STANDARD</h1>
+<img src="assets/71487A6F-4BB2-4D5F-B77E-744D8CA36AC9.png" class="hero-logo" alt="ORO Standards Logo">
 
-<p class="subtitle">AMBITION • BUSINESS • CULTURE • LEGACY</p>
+<h1 class="hero-title">THE GOLD STANDARD</h1>
 
-<a href="#ventures" class="btn">ENTER ORO</a>
+<p class="hero-sub">
+AMBITION • BUSINESS • CULTURE • LEGACY
+</p>
+
+<a href="#about" class="enter-btn">
+ENTER ORO
+</a>
+
+</div>
 
 </section>
 
-<section class="ventures" id="ventures">
+<section class="section" id="about">
 
-<h2 class="section-title">VENTURES</h2>
+<h2>ORO STANDARDS™</h2>
 
-<div class="grid">
+<p>
+ORO Standards™ is a brand built around ambition,
+creativity and ownership.
+</p>
 
-<div class="card">
-<h3>Connect Solutions</h3>
-<p>Whatever you need, we connect you.</p>
+<br>
+
+<p>
+Founded through music, culture and entrepreneurship,
+ORO Standards represents a commitment to a higher standard.
+</p>
+
+<br>
+
+<p>
+This is not a company.
+</p>
+
+<p>
+It is a standard.
+</p>
+
+</section>
+
+<section class="founder">
+
+<h2>T AURELIO</h2>
+
+<p>
+Artist • Entrepreneur • Founder
+</p>
+
+<a href="https://instagram.com/" target="_blank" class="instagram-btn">
+FOLLOW ON INSTAGRAM →
+</a>
+
+</section>
+
+<section class="future">
+
+<h2>THE FUTURE</h2>
+
+<div class="future-grid">
+
+<div class="future-item">
+MUSIC
 </div>
 
-<div class="card">
-<h3>Music</h3>
-<p>Creative projects, releases and cultural influence.</p>
+<div class="future-item">
+LABEL
 </div>
 
-<div class="card">
-<h3>Watches</h3>
-<p>Luxury timepieces inspired by precision and legacy.</p>
+<div class="future-item">
+CLOTHING
 </div>
 
-<div class="card">
-<h3>Clothing</h3>
-<p>Premium apparel built around ambition and identity.</p>
-</div>
-
-<div class="card">
-<h3>Investments</h3>
-<p>Building long-term value through strategic opportunities.</p>
+<div class="future-item">
+PROJECTS
 </div>
 
 </div>
@@ -185,8 +324,11 @@ margin-bottom:10px;
 </section>
 
 <footer>
+
 <h2>ORO STANDARDS™</h2>
-<p>The Gold Standard.</p>
+
+<p>THE GOLD STANDARD</p>
+
 </footer>
 
 </body>
