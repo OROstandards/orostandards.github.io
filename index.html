@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ORO Standards™ | The Gold Standard</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+background:#050505;
+color:#fff;
+font-family:Montserrat,sans-serif;
+overflow-x:hidden;
+}
+
+body::before{
+content:'';
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at 50% 35%, rgba(212,175,55,.18), transparent 40%),
+radial-gradient(circle at 20% 80%, rgba(212,175,55,.08), transparent 30%),
+radial-gradient(circle at 80% 20%, rgba(212,175,55,.08), transparent 30%);
+z-index:-2;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.logo{
+width:min(75vw,520px);
+filter:drop-shadow(0 0 40px rgba(212,175,55,.35));
+animation:float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+50%{transform:translateY(-12px);}
+}
+
+.title{
+font-family:Cinzel,serif;
+font-size:clamp(2rem,7vw,5rem);
+color:#d4af37;
+letter-spacing:6px;
+margin-top:20px;
+}
+
+.subtitle{
+margin-top:18px;
+font-size:clamp(1rem,3vw,1.4rem);
+letter-spacing:4px;
+opacity:.9;
+}
+
+.btn{
+display:inline-block;
+margin-top:40px;
+padding:16px 42px;
+border:1px solid #d4af37;
+color:#d4af37;
+text-decoration:none;
+letter-spacing:2px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#d4af37;
+color:#000;
+box-shadow:0 0 30px rgba(212,175,55,.4);
+}
+
+.ventures{
+padding:80px 8% 120px;
+}
+
+.section-title{
+font-family:Cinzel,serif;
+text-align:center;
+font-size:clamp(2rem,5vw,3.5rem);
+color:#d4af37;
+margin-bottom:50px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,.03);
+border:1px solid rgba(212,175,55,.25);
+backdrop-filter:blur(10px);
+padding:40px 30px;
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#d4af37;
+box-shadow:0 0 40px rgba(212,175,55,.18);
+}
+
+.card h3{
+font-family:Cinzel,serif;
+color:#d4af37;
+font-size:1.8rem;
+margin-bottom:15px;
+}
+
+.card p{
+line-height:1.8;
+color:#ddd;
+}
+
+footer{
+padding:50px 20px;
+text-align:center;
+border-top:1px solid rgba(212,175,55,.15);
+}
+
+footer h2{
+font-family:Cinzel,serif;
+color:#d4af37;
+margin-bottom:10px;
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+<img class="logo" src="assets/71487A6F-4BB2-4D5F-B77E-744D8CA36AC9.png" alt="ORO Standards Logo">
+
+<h1 class="title">THE GOLD STANDARD</h1>
+
+<p class="subtitle">AMBITION • BUSINESS • CULTURE • LEGACY</p>
+
+<a href="#ventures" class="btn">ENTER ORO</a>
+
+</section>
+
+<section class="ventures" id="ventures">
+
+<h2 class="section-title">VENTURES</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Connect Solutions</h3>
+<p>Whatever you need, we connect you.</p>
+</div>
+
+<div class="card">
+<h3>Music</h3>
+<p>Creative projects, releases and cultural influence.</p>
+</div>
+
+<div class="card">
+<h3>Watches</h3>
+<p>Luxury timepieces inspired by precision and legacy.</p>
+</div>
+
+<div class="card">
+<h3>Clothing</h3>
+<p>Premium apparel built around ambition and identity.</p>
+</div>
+
+<div class="card">
+<h3>Investments</h3>
+<p>Building long-term value through strategic opportunities.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<h2>ORO STANDARDS™</h2>
+<p>The Gold Standard.</p>
+</footer>
+
+</body>
+</html>
